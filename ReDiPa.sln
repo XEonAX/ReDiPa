@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReDiPa.Server", "ReDiPa.Server\ReDiPa.Server.csproj", "{612FC32F-D9DE-43B0-8461-427C12D42217}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReDiPa.Web", "ReDiPa.Web\ReDiPa.Web.csproj", "{A6454D85-D41F-4825-A3D4-97B4C1670B05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{612FC32F-D9DE-43B0-8461-427C12D42217}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{612FC32F-D9DE-43B0-8461-427C12D42217}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{612FC32F-D9DE-43B0-8461-427C12D42217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6454D85-D41F-4825-A3D4-97B4C1670B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6454D85-D41F-4825-A3D4-97B4C1670B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6454D85-D41F-4825-A3D4-97B4C1670B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6454D85-D41F-4825-A3D4-97B4C1670B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

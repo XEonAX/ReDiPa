@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="ReDiPaWeb">
+<head>
+    <title>Re.Di.Pa</title>
+    <meta charset="utf-8" />
+    <link href="content/please-wait.css" rel="stylesheet" />
+    <link href="content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="scripts/please-wait.js"></script>
+    <script type="text/javascript">
+        window.loading_screen = window.pleaseWait({
+            logo: "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
+            backgroundColor: '#eee',
+            loadingHtml: "<div class='cssload-loader'><div class='cssload-dot'></div><div class='cssload-dot'></div><div class='cssload-dot'></div></div>"
+        });
+    </script>
+    <link href="content/loading-bar.css" rel="stylesheet" />
+    <link href="content/angular-material.css" rel="stylesheet">
+    <link href="content/font-awesome.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <!--<link href="content/9-cube-grid.css" rel="stylesheet" />-->
+
+    <div id="page" layout="column">
+        <md-toolbar ng-controller="HeaderController">
+            <div class="md-toolbar-tools md-warn">
+                <md-button ng-href="#/" class="headerbutton">
+                    <i class="fa fa-globe"></i>
+                    <i class="fa fa-folder-open"></i>
+                    <i class="fa fa-archive"></i>
+
+                    ReDiPa
+                </md-button>
+                <span flex></span>
+
+                <md-button class="md-primary" ng-click="showLogin($event)">Login</md-button>
+            </div>
+        </md-toolbar>
+        <md-card>
+            <!--<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">-->
+            <md-card-content>
+                <div data-ng-view=""></div>
+            </md-card-content>
+            <!--<md-card-actions layout="row" layout-align="end center">
+                <md-button>Action 1</md-button>
+                <md-button>Action 2</md-button>
+            </md-card-actions>-->
+        </md-card>
+        <div flex></div>
+        <footer class="container">
+            <md-card>
+                <md-card-content layout="row" layout-align="space-between center">
+                    <div layout="row" layout-align="center center">
+                        <div>Created by </div><md-button class="md-primary" ng-href="http://www.AEonAX.com" target="_blank" style="height:20px">AEonAX</md-button>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <div>Hosted on</div><md-button class="md-primary" ng-href="https://github.com/XEonAX/Linguistique-Valida" target="_blank"><div class="fa fa-github"></div> Github</md-button>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </footer>
+    </div>
+
+
+    <!-- 3rd party libraries -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="scripts/angular-messages.js"></script>
+    <!--<script src="scripts/angular-ui/ui-bootstrap.js"></script>-->
+    <!--<script src="scripts/angular-ui/ui-bootstrap-tpls.js"></script>-->
+    <script src="scripts/angular-aria.js"></script>
+    <script src="scripts/angular-material.js"></script>
+    <script src="scripts/md-data-table.js"></script>
+    <script src="scripts/loading-bar.js"></script>
+
+
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+
+    <!-- Load services -->
+    <script src="app/services/projectsService.js"></script>
+    <script src="app/services/typeaheadService.js"></script>
+
+    <!-- Load controllers -->
+    <script src="app/header-controller.js"></script>
+    <script src="app/controllers/projectsController.js"></script>
+    <script src="app/controllers/createProjectController.js"></script>
+    <script src="app/controllers/projectController.js"></script>
+    <!-- Load custom filters -->
+</body>
+</html>

@@ -1,4 +1,6 @@
 ﻿using Owin;
+using Microsoft.Owin.FileSystems;
+using Microsoft.Owin.StaticFiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,8 +24,26 @@ namespace ReDiPa.Server
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            config.EnsureInitialized();
             appBuilder.UseWebApi(config);
+            Console.WriteLine("WebAPI Configured.");
+
+            var physicalFileSystem = new PhysicalFileSystem(Program.FileSystemPath);
+            var options = new FileServerOptions
+            {
+                EnableDirectoryBrowsing=true,
+                EnableDefaultFiles = true,
+                FileSystem = physicalFileSystem
+            };
+            options.StaticFileOptions.FileSystem = physicalFileSystem;
+            options.StaticFileOptions.ServeUnknownFileTypes = true;
+            options.DefaultFilesOptions.DefaultFileNames = new[]
+            {
+                "index.html"
+            };
+            
+            appBuilder.UseFileServer(options);
+            Console.WriteLine("FileServer Configured. Serving {0}",physicalFileSystem.Root);
+            config.EnsureInitialized();
         }
     }
 }

@@ -1,0 +1,198 @@
+﻿.headerbutton {
+    font-size: 22px;
+}
+
+
+.iconrectbutton {
+    font-size: 22px;
+    min-width: 50px;
+}
+
+.app-loading__animation {
+    background-image: url('../assets/images/loader.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 64px;
+    transition: opacity 150ms ease-out 0s;
+    width: 64px;
+    margin: 40px auto;
+}
+
+.boxLoading {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.boxLoading:before {
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #000;
+  opacity: 0.1;
+  position: absolute;
+  top: 59px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow .5s linear infinite;
+}
+.boxLoading:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: rgb(63,81,181);
+  animation: animate .5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+
+.cssload-loader * {
+	box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;
+}
+
+.cssload-loader {
+	position: absolute;
+	left: 50%;
+	width: 195px;
+	height: 195px;
+	margin-top: -97px;
+	margin-left: -97px;
+	perspective: 195px;
+	transform-type: preserve-3d;
+ }
+
+.cssload-dot {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 117px;
+	height: 117px;
+	margin-top: -58px;
+	margin-left: -58px;
+	border-radius: 97px;
+	border: 39px outset rgb(30,63,87);
+	background-color: transparent;
+	transform-type: preserve-3d;
+	transform-origin: 50% 50%;
+	transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+	animation: cssload-dot1 1150ms cubic-bezier(.49,.06,.43,.85) infinite;
+}
+
+.cssload-dot:nth-child(2) {
+	width: 136px;
+	height: 136px;
+	margin-top: -68px;
+	margin-left: -68px;
+	border-width: 29px;
+	border-color: rgb(68,120,145);
+	animation-name: cssload-dot2;
+	animation-delay: 86.25ms;
+	box-shadow: inset 0 0 15px 0 rgba(0,0,0,0.1);
+	transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+}
+
+.cssload-dot:nth-child(3) {
+	width: 156px;
+	height: 156px;
+	margin-top: -78px;
+	margin-left: -78px;
+	border-width: 19px;
+	border-color: rgb(107,178,205);
+	animation-name: cssload-dot3;
+	animation-delay: 172.5ms;
+	box-shadow: inset 0 0 15px 0 rgba(0,0,0,0.1);
+	transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+}
+
+
+
+
+
+
+
+@keyframes cssload-dot1 {
+	0% {
+		border-color: rgb(30,63,87);
+		transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+	}
+	50% {
+		border-color: rgb(30,87,79);
+		transform: rotateX(20deg) rotateY(20deg) rotateZ(50deg) translateZ(0px);
+	}
+	100% {
+		border-color: rgb(30,63,87);
+		transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+	}
+}
+
+@keyframes cssload-dot2 {
+	0% {
+		border-color: rgb(68,120,145);
+		box-shadow: inset 0 0 15px 0 rgba(255,255,255,0.2);
+		transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+	}
+	50% {
+		border-color: rgb(68,145,128);
+		box-shadow: inset 0 0 15px 0 rgba(0,0,0,0.8);
+		transform: rotateX(20deg) rotateY(20deg) rotateZ(50deg) translateZ(0px);
+	}
+	100% {
+		border-color: rgb(68,120,145);
+		box-shadow: inset 0 0 15px 0 rgba(255,255,255,0.2);
+		transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+	}
+}
+
+@keyframes cssload-dot3 {
+	0% {
+		border-color: rgb(107,178,205);
+		box-shadow: inset 0 0 15px 0 rgba(0,0,0,0.1);
+		transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+	}
+	50% {
+		border-color: #6bcdb2;
+		box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.8);
+		transform: rotateX(20deg) rotateY(20deg) rotateZ(50deg) translateZ(0px);
+	}
+	100% {
+		border-color: #6bb2cd;
+		box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
+		transform: rotateX(24deg) rotateY(20deg) rotateZ(0deg) translateZ(-24px);
+	}
+}
